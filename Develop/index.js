@@ -3,6 +3,7 @@ const fs = require("fs");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
+const generateHTML = require("./templatehtml");
 let teamInfo = [];
 
 const menuQuestions = [
@@ -39,7 +40,7 @@ const engineerQuestions = [
   {
     type: "input",
     message: "whats the engineers name?",
-    name: "engineer",
+    name: "name",
   },
   {
     type: "input",
@@ -61,7 +62,7 @@ const internQuestions = [
   {
     type: "input",
     message: "whats the interns name",
-    name: "intern",
+    name: "name",
   },
   {
     type: "input",
@@ -102,6 +103,7 @@ function menu() {
       intern();
     } else {
       //add build team function call back
+      buildTeamHtml();
     }
   });
 }
@@ -128,5 +130,12 @@ function intern() {
     teamInfo.push(intern);
     menu();
   });
+}
+function buildTeamHtml() {
+  const htmlPageContent = generateHTML(teamInfo);
+
+  fs.writeFile("index.html", htmlPageContent, (err) =>
+    err ? console.log(err) : console.log("Successfully created index.html!")
+  );
 }
 init();
