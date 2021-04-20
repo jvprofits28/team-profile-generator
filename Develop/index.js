@@ -17,7 +17,7 @@ const menuQuestions = [
 const managerQuestions = [
   {
     type: "input",
-    message: "whats the managers name?",
+    message: "Whats the managers name?",
     name: "name",
   },
   {
@@ -27,56 +27,56 @@ const managerQuestions = [
   },
   {
     type: "input",
-    message: "whats the manager email?",
+    message: "Whats the manager email?",
     name: "email",
   },
   {
     type: "input",
-    message: "whats the office number?",
+    message: "Whats the office number?",
     name: "officeNumber",
   },
 ];
 const engineerQuestions = [
   {
     type: "input",
-    message: "whats the engineers name?",
+    message: "Whats the engineers name?",
     name: "name",
   },
   {
     type: "input",
-    message: "whats the engineers ID?",
+    message: "Whats the engineers ID?",
     name: "ID",
   },
   {
     type: "input",
-    message: "whats the engineers email?",
+    message: "Whats the engineers email?",
     name: "email",
   },
   {
     type: "input",
-    message: "whats the engineers Github username?",
+    message: "Whats the engineers Github username?",
     name: "github",
   },
 ];
 const internQuestions = [
   {
     type: "input",
-    message: "whats the interns name",
+    message: "Whats the interns name?",
     name: "name",
   },
   {
     type: "input",
-    message: "whats the interns ID?",
+    message: "Whats the interns ID?",
     name: "ID",
   },
   {
     type: "input",
-    message: "whats the interns email?",
+    message: "Whats the interns email?",
     name: "email",
   },
   {
     type: "input",
-    message: "whats the interns school?",
+    message: "Whats the interns school?",
     name: "school",
   },
 ];

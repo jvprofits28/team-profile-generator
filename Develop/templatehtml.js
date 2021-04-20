@@ -1,30 +1,33 @@
 function managerCard(data) {
   return `<div class="card" style="width: 18rem">
-      <div class="card-header">${data.name}</div>
+  <div class="card-header p-3 mb-2 bg-primary text-white"><h3>Manager</h3></div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${data.id}</li>
-        <li class="list-group-item">${data.email}</li>
-        <li class="list-group-item">${data.officeNumber}</li>
+        <li class="list-group-item">Name: ${data.name}</li>
+        <li class="list-group-item">ID: ${data.id}</li>
+        <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
+        <li class="list-group-item">Office Number: ${data.officeNumber}</li>
       </ul>
     </div>`;
 }
 function engineerCard(data) {
   return `<div class="card" style="width: 18rem">
-      <div class="card-header">${data.name}</div>
+  <div class="card-header p-3 mb-2 bg-primary text-white"><h3>Engineer</h3></div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${data.id}</li>
-        <li class="list-group-item">${data.email}</li>
-        <li class="list-group-item">${data.github}</li>
+        <li class="list-group-item">Name: ${data.name}</li>
+        <li class="list-group-item">ID: ${data.id}</li>
+        <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
+        <li class="list-group-item">Github: <a href="https://github.com/${data.github}" target="_blank">${data.github}</a></li>
       </ul>
     </div>`;
 }
 function internCard(data) {
   return `<div class="card" style="width: 18rem">
-    <div class="card-header">${data.name}</div>
+  <div class="card-header  p-3 mb-2 bg-primary text-white"><h3>Intern</h3></div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">${data.id}</li>
-      <li class="list-group-item">${data.email}</li>
-      <li class="list-group-item">${data.school}</li>
+      <li class="list-group-item">Name: ${data.name}</li>
+      <li class="list-group-item">ID: ${data.id}</li>
+      <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
+      <li class="list-group-item">School: ${data.school}</li>
     </ul>
   </div>`;
 }
@@ -46,30 +49,24 @@ function generateHTML(teamInfo) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Team Generator</title>
   </head>
   <body>
-  <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Team</h1>
-      </div>
-    </div>
+  <header>
+    <h1>My Team</h1>
+  </header>
     ${cardArr.join("")}
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"
+  ></script>
   </body>
 </html>`;
 }
